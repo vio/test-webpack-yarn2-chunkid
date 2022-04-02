@@ -1,0 +1,21 @@
+.root {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  background: #fff !important;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: 16px;
+  flex: 0 0 auto;
+}
+
+.menu {
+  flex: 0 0 25%;
+  justify-content: flex-end;
+}

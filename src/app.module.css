@@ -1,0 +1,22 @@
+.contentContainer {
+  padding: 1rem;
+}
+
+.pageHeader {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.content {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 768px;
+  background: #fff;
+}
+
+.contentInner {
+  padding: 24px;
+}
+
+.footer {
+  text-align: center;
+}
