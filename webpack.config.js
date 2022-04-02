@@ -57,5 +57,11 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-  }
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all'
+    },
+  },
 };
