@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleStatsWebpackPlugin } = require('bundle-stats-webpack-plugin');
+const { StatsWriterPlugin } = require('webpack-stats-plugin');
 
 const SRC_DIR = path.resolve(__dirname, 'src');
 const OUT_DIR = path.resolve(__dirname, 'dist');
@@ -54,6 +56,18 @@ module.exports = {
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
     }),
+    new BundleStatsWebpackPlugin({
+      outDir: '../artifacts'
+    }),
+     new StatsWriterPlugin({
+      filename: '../artifacts/webpack-stats.json',
+      stats: {
+        assets: true,
+        entrypoints: true,
+        chunks: true,
+        modules: true
+      }
+    })
   ],
   devServer: {
     historyApiFallback: true,
