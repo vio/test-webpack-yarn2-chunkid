@@ -27,3 +27,9 @@ jobs:
         uses: relative-ci/agent-upload-artifact-action@v1
         with:
           webpackStatsFile: ./webpack-stats.json
+
+      # Upload artifacts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: webpack-stats-artifacts
+          path: artifacts
