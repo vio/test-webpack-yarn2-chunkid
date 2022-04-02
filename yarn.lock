@@ -1670,6 +1670,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:^15.0.0":
+  version: 15.7.4
+  resolution: "@types/prop-types@npm:15.7.4"
+  checksum: ef15c425a944f6b13824a87854cccf238e1b4cd0350b3124f4938406fe758fbdd6fadb2480d1388a00daeab61ce9888be5ca2b73da275f5dbc977143ff98e1eb
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.9.7
   resolution: "@types/qs@npm:6.9.7"
@@ -6516,24 +6523,25 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"react-is@npm:^17.0.0":
-  version: 17.0.2
-  resolution: "react-is@npm:17.0.2"
-  checksum: 3eff23f410d40ab9bc5177f147a92c7f42c356a21ecea340e0554566956d67e5e1ba56f26cc7fa22339ac3c7151744177bd6305eaa26d3cbf15f354358c9d9b6
+"react-is@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "react-is@npm:18.0.0"
+  checksum: 585423faf1011f42970c0f21857c65ade66d4ef063835f32fdbe42f8264ddf740f4ff8c7e2533571421f865b5a5b59a83951ecdc59fd3a94f4864a3378e7f0c2
   languageName: node
   linkType: hard
 
-"react-markdown@npm:8.0.0":
-  version: 8.0.0
-  resolution: "react-markdown@npm:8.0.0"
+"react-markdown@npm:8.0.2":
+  version: 8.0.2
+  resolution: "react-markdown@npm:8.0.2"
   dependencies:
     "@types/hast": ^2.0.0
+    "@types/prop-types": ^15.0.0
     "@types/unist": ^2.0.0
     comma-separated-tokens: ^2.0.0
     hast-util-whitespace: ^2.0.0
     prop-types: ^15.0.0
     property-information: ^6.0.0
-    react-is: ^17.0.0
+    react-is: ^18.0.0
     remark-parse: ^10.0.0
     remark-rehype: ^10.0.0
     space-separated-tokens: ^2.0.0
@@ -6544,7 +6552,7 @@ fsevents@~2.3.2:
   peerDependencies:
     "@types/react": ">=16"
     react: ">=16"
-  checksum: a797644a1b87e880453cc6c4be8217a19d3dee1910077e2f815ad820d81dddc0877f2d112e6e0f09f68bf4ff3011d62c1e1d20cc103d7eef27db4e2a4c7d2965
+  checksum: a00fa79e7931a66784f53975361912b36d4582c48fb99d730bf138ec9c86a1e55c8584f4b856b917d8f4ee12dacdf6c81f7c1fb0811a1892713f39f464cd8e6f
   languageName: node
   linkType: hard
 
@@ -7468,7 +7476,7 @@ fsevents@~2.3.2:
     react: 17.0.2
     react-dom: 17.0.2
     react-feather: 2.0.9
-    react-markdown: 8.0.0
+    react-markdown: 8.0.2
     react-router-dom: 6.2.1
     regenerator-runtime: 0.13.9
     swr: 1.2.1
