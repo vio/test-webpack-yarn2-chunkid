@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -47,6 +48,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].bundle.[contenthash].css',
       chunkFilename: '[name].chunk.[contenthash].css',
+    }),
+    // Ignore moment locale require error
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/,
     }),
   ],
   devServer: {
