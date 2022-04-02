@@ -22,16 +22,8 @@ jobs:
       # Build and output webpack stats
       - run: yarn build --json webpack-stats.json
 
-      # Send webpack stats and build information to RelativeCI
-      - name: Send webpack stats to RelativeCI
-        uses: relative-ci/agent-action@v2
+      # Upload webpack-stats.json to use on relative-ci.yaml workflow
+      - name: Upload webpack stats artifact
+        uses: relative-ci/agent-upload-artifact-action@v1
         with:
           webpackStatsFile: ./webpack-stats.json
-          key: ${{ secrets.RELATIVE_CI_KEY }}
-
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-artifacts
-          path: |
-            webpack-stats.json
