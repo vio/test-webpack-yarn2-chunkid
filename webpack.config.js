@@ -59,9 +59,14 @@ module.exports = {
     historyApiFallback: true,
   },
   optimization: {
+    chunkIds: 'named',
     runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all'
+      chunks: 'all',
+      name(_, chunks, cacheGroupKey) {
+        const allChunksNames = chunks.map((item) => item.name).join('~');
+        return `${cacheGroupKey}-${allChunksNames}`;
+      },
     },
   },
 };
